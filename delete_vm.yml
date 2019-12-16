@@ -1,0 +1,12 @@
+- hosts: localhost
+  gather_facts: no
+
+  vars:
+    engine_user: admin@internal
+
+  roles:
+    - role: oVirt.vm-infra
+      vars:
+        vms:
+          - name: "jzmeskal_1"
+            state: absent
